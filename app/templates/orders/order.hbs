@@ -1,2 +1,9 @@
-<p>Order {{model.id}} for {{model.name}}</p>
-<p>The order is ready!</p>
+{{#each model.items as |lineItem|}}
+  <tr>
+    <td>{{lineItem.title}}</td>
+    <td>{{lineItem.quantity}}</td>
+    <td>{{lineItem.unitPrice}}</td>
+    <td>{{lineItem.price}}</td>
+    <td>XX%</td>
+  </tr>
+{{/each}}
